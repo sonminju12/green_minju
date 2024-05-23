@@ -1,0 +1,226 @@
+@charset 'utf-8';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+/* --------------------------------------레이아웃설정-------------------------------------- */
+
+
+
+
+
+
+/* --------------------------------------헤더설정-------------------------------------- */
+.logo {
+    font-size: 30px;
+}
+
+
+
+
+
+/* --------------------------------------네비설정-------------------------------------- */
+.box2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.GNB {}
+
+.GNB ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.GNB li {
+    display: block;
+}
+
+.GNB a {
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+
+
+
+/* --------------------------------------메인이미지설정-------------------------------------- */
+.Top_img {
+    max-width: 100%;
+}
+
+
+
+
+
+/* --------------------------------------공지사항설정-------------------------------------- */
+.notice {
+    margin-top: 20px;
+}
+
+.notice h2 {
+    margin-bottom: 5px;
+    font-size: 19px;
+    color: #666;
+}
+
+.notice ul {}
+
+.notice li {}
+
+.notice a {
+    color: #666;
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+    border-bottom: dotted 2px #ddd;
+}
+
+.notice a::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.notice time {
+    float: left;
+}
+
+.notice .txt {
+    float: none;
+    margin-left: 40px;
+    padding-left: 10px;
+}
+
+
+
+.SNS {}
+
+.SNS {}
+
+.SNS {}
+
+.SNS {}
+
+.SNS {}
+
+
+
+
+.contents {}
+
+.contents h2 {}
+
+.contents ul {}
+
+.contents li {}
+
+.contents a {}
+
+
+
+
+
+/* --------------------------------------푸터설정-------------------------------------- */
+.box5 {
+    background-color: #ddd;
+    padding: 15px 0;
+}
+
+.Copyright {}
+
+.Copyright p {
+    font-size: 14px;
+}
+
+
+
+
+
+/* --------------------------------------여백설정-------------------------------------- */
+.box_A {
+    padding: 8px 10px;
+}
+
+.box3 {}
+
+.box4 {
+    padding: 15px 10px;
+}
+
+.box5 {
+    padding: px px;
+}
+
+
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@미디어쿼리@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* --------------------------------------786px 이상-------------------------------------- */
+@media(min-width:786px) {
+    .box_A {
+        display: flex;
+    }
+
+    .box_A>div {
+        width: 50%;
+    }
+
+    .box2 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .GNB {}
+
+    .GNB ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+
+
+
+
+/* --------------------------------------와이드데스크탑-------------------------------------- */
+@media(min-width:1280px) {
+
+    .box_A,
+    .Copyright,
+    .box3,
+    .box4 {
+        width: 1140px;
+        margin: 0 auto;
+    }
+
+    .box_A_OUT {
+        border-bottom: solid 1px #666;
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+}
