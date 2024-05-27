@@ -19,7 +19,7 @@ img {
     vertical-align: bottom;
 }
 
-/* --------------------------------------레이아웃설정-------------------------------------- */
+
 
 
 
@@ -41,8 +41,6 @@ img {
     justify-content: flex-start;
     align-items: center;
 }
-
-.GNB {}
 
 .GNB ul {
     display: flex;
@@ -75,7 +73,8 @@ img {
 
 /* --------------------------------------공지사항설정-------------------------------------- */
 .notice {
-    margin-top: 20px;
+    padding: 20px;
+    border: solid 5px #dddddd;
 }
 
 .notice h2 {
@@ -83,10 +82,6 @@ img {
     font-size: 19px;
     color: #666;
 }
-
-.notice ul {}
-
-.notice li {}
 
 .notice a {
     color: #666;
@@ -113,29 +108,103 @@ img {
 }
 
 
+/* --------------------------------------sns설정-------------------------------------- */
+.SNS h2 {
+    font-size: 14px;
+    background-color: #ddd;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
-.SNS {}
+.SNS li:nth-child(1) a {
+    background-color: #63bafb;
+}
 
-.SNS {}
+.SNS li:nth-child(2) a {
+    background-color: #5288f7;
+}
 
-.SNS {}
+.SNS li:nth-child(3) a {
+    background-color: #f65d4a;
+}
 
-.SNS {}
+.SNS a {
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
 
-.SNS {}
+
+/* 말풍선 */
+/* https://cssarrowplease.com/ */
+
+.SNS h2 {
+    position: relative;
+    background: #dddddd;
+}
+
+.SNS h2:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(221, 221, 221, 0);
+    border-top-color: #dddddd;
+    border-width: 15px;
+    margin-left: -15px;
+}
 
 
 
 
-.contents {}
+/* --------------------------------------데이터설정-------------------------------------- */
 
-.contents h2 {}
+.box6 h2{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+}
 
-.contents ul {}
+.box6 i{
+    font-size: 50px;
+    padding: 50px;
+    display: block;
+}
 
-.contents li {}
+.box6 a {
+    display: block;
+    text-align: center;
+    background-color: #000;
+    color: #fff
+}
 
-.contents a {}
+.box6 p {
+    padding: 15px 0;
+    background-color: #524e3c;
+    font-size: 12px;
+}
+
+
+.box6-1 i {
+    background-color: #bfbd13;
+}
+
+.box6-2 i {
+    background-color: #c58839;
+}
+
+.box6-3 i {
+    background-color: #859f46;;
+}
 
 
 
@@ -146,8 +215,6 @@ img {
     background-color: #ddd;
     padding: 15px 0;
 }
-
-.Copyright {}
 
 .Copyright p {
     font-size: 14px;
@@ -162,15 +229,17 @@ img {
     padding: 8px 10px;
 }
 
-.box3 {}
-
 .box4 {
     padding: 15px 10px;
 }
 
-.box5 {
-    padding: px px;
-}
+.box6 {
+    padding-top: 25px;}
+
+.data>div {
+    padding-bottom: 5px;}
+
+
 
 
 
@@ -180,6 +249,7 @@ img {
 
 /* --------------------------------------786px 이상-------------------------------------- */
 @media(min-width:786px) {
+/* --------------------------------------레이아웃설정-------------------------------------- */
     .box_A {
         display: flex;
     }
@@ -194,15 +264,42 @@ img {
         align-items: center;
     }
 
-    .GNB {}
-
     .GNB ul {
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
-}
 
+    .box6 {
+        width: 100%;
+    }
+    
+    .data {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .data>div {
+        width: 32%;
+    }
+    
+
+/* --------------------------------------박스4, 4-1 가로정렬-------------------------------------- */
+    .box4 {
+        display: flex;
+    }
+    
+    .box4-1 {
+        width: 70%;
+        padding-right: 35px;
+        box-sizing: border-box;
+    }
+    
+    .box4-2 {
+        width: 30%
+    }
+
+}
 
 
 
@@ -213,7 +310,8 @@ img {
     .box_A,
     .Copyright,
     .box3,
-    .box4 {
+    .box4, 
+    .box6{
         width: 1140px;
         margin: 0 auto;
     }
