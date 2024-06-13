@@ -1,14 +1,11 @@
-@charset 'utf';
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 전체설정 */
 
 * {
-    padding: 0;
     margin: 0;
-}
-
-ol,
-ul {
-    list-style: none;
-    color: black;
+    padding: 0;
 }
 
 a {
@@ -16,18 +13,25 @@ a {
     color: #000;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
 img {
     vertical-align: bottom;
 }
 
-/* 헤더 */
+
+/* 헤더설정 */
+
 header {
-    width: 100%;
     background-color: #F6F5EF;
     border-bottom: 1px solid #000;
     padding: 20px 0;
     position: fixed;
     z-index: 999;
+    width: 100%;
 }
 
 .header_inner {
@@ -43,7 +47,7 @@ header {
 
 .header_inner h1 a {}
 
-.header_inner h1 img {
+.header_inner h1 a img {
     max-width: 75px;
     width: 100%;
 }
@@ -57,7 +61,6 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    /* 동일간격분배 */
 }
 
 .header_inner nav li {}
@@ -86,9 +89,7 @@ header {
     padding: 5px;
 }
 
-.header_inner .util form {
-    
-}
+.header_inner .util form {}
 
 .header_inner .util form div {
     background-color: #fff;
@@ -104,30 +105,24 @@ header {
 }
 
 .header_inner .util form i {
-    margin-left: 6px;
+    margin-left: 5px;
 }
 
-
-
-
-
 /* 콘텐츠전체설정 */
+
 .wrap {
     padding-top: 115px;
 }
 
-
-/* 첫번째섹션 */
+/* 첫번째섹션설정 */
 section:nth-child(1) {
     display: flex;
     justify-content: center;
-    padding: 50px 0;
+    padding: 70px 0;
     background-image: url(img/summer_back.jpg);
     background-size: cover;
     background-position: center;
 }
-
-
 
 section:nth-child(1) .hero {
     display: flex;
@@ -167,25 +162,458 @@ section:nth-child(1) .mainImg {
     transform: translateX(50px);
 }
 
-.mainImg img:nth-child(2) {
-
-}
+.mainImg img:nth-child(2) {}
 
 .mainImg img:nth-child(3) {
     transform: translateX(-70px);
 }
 
+/* 두번째섹션설정 */
+
+section:nth-child(2) {
+    display: flex;
+    height: 62px;
+}
+
+section:nth-child(2) .notice {
+    background-color: #111;
+    width: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+section:nth-child(2) .promo {
+    background-color: #f6f5ef;
+    width: 50%;
+}
+
+/* 공지사항설정 */
+
+.notice li a {
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    padding: 5px 0;
+}
+
+.notice_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.notice_inner ul {
+    position: relative;
+    width: 70%;
+    height: 24px;
+    overflow: hidden;
+}
+
+.notice_inner li {
+    position: absolute;
+    background-color: #111;
+    left: 0;
+    top: 100%;
+    transition: all 0.8s;
+}
+
+.notice_inner li:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+
+.notice_inner li:hover {
+    top: 0;
+}
+
+
+section:nth-child(2) h2 {
+    font-size: 14px;
+}
+
+section:nth-child(2) span {
+    margin-right: 20px;
+}
+
+section:nth-child(2) span a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.notice span a {
+    color: #fff;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+
+}
+
+
+/* 프로모션설정 */
+.promo {
+    display: flex;
+    align-items: center;
+}
+
+.promo_inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.promo_inner h2 {
+    width: 50%;
+    text-align: center;
+}
+
+.promo_inner span {
+    width: 50%;
+}
+
+section:nth-child(2) .promo_inner span a {
+    border-color: #000;
+}
 
 
 
 
-/* -----------미디어쿼리--------------------------------- */
 
-/* 와이드데스크탑 */
-/* 1280px 이상 */
-@media(min-width : 1280px){
-    .header_inner {
+/*세번째 섹션설정  */
+section:nth-child(3) {
+    background-color: #1e3932;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.reward_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reward_inner .imgBox {
+    width: 220px;
+    text-align: center;
+}
+
+.reward_inner .txtBox {
+    width: calc(100% - 220px);
+}
+
+
+.reward_inner .txtBox .topBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 15px;
+}
+
+.reward_inner .txtBox .topBox h2 {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.reward_inner .txtBox .topBox .text {
+    width: 70%;
+}
+
+.reward_inner .txtBox .topBox .btn {
+    width: 30%;
+}
+
+.reward_inner .txtBox .topBox .btn ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reward_inner .txtBox .topBox .btn li {
+    margin-left: 8px;
+}
+
+.reward_inner .txtBox .topBox .btn a {
+    display: flex;
+    background-color: #00704a;
+    color: #fff;
+    font-size: 14px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 4px;
+    border: 2px solid #00704a;
+}
+
+.reward_inner .txtBox .topBox .btn li:nth-child(2) a {
+    background-color: transparent;
+    border-color: #ffff;
+}
+
+
+.reward_inner .txtBox .bottomBox {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.reward_inner .txtBox .bottomBox .text {
+    width: 70%;
+}
+
+.reward_inner .txtBox .bottomBox .btn {
+    width: 30%;
+}
+
+.reward_inner .txtBox .bottomBox .btn ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.reward_inner .txtBox .bottomBox .btn li {}
+
+.reward_inner .txtBox .bottomBox .btn a {
+    display: flex;
+    color: #fff;
+    font-size: 14px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    letter-spacing: -1px;
+}
+
+
+
+
+
+/*네번째 섹션설정*/
+section:nth-child(4) {
+    height: 500px;
+    padding: 60px 0;
+    background-image: url(img/brazil.png);
+    background-size: cover;
+    background-position: center;}
+
+.summer_inner{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.summer_inner .imgBox{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.summer_inner .txtBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #7e5732;
+}
+
+.summer_inner .txtBox h4{
+    letter-spacing: -2px;
+    font-size: 18px;
+}
+
+.summer_inner .txtBox h2{
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.summer_inner .txtBox p{
+    letter-spacing: -2px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.summer_inner .txtBox span{
+
+}
+
+.summer_inner .txtBox span a{
+    color: #7e5732;
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.summer_inner .txtBox span a:hover{
+    transition: all 0.5s;
+    color: #fff;
+    background-color: #7e5732;
+    text-decoration: underline;
+}
+
+/*다섯번째 섹션설정*/
+section:nth-child(5) {
+    background-image: url(img/bali.png);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 40px 0;
+}
+
+.bali_inner{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bali_inner .txtBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bali_inner .txtBox span{
+    margin-top: 20px;
+}
+
+.bali_inner .imgBox {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.bali_inner .txtBox span a {
+    color: #b87643;;
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid #b87643;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.txtBox span a:hover{
+    transition: all 0.5s;
+    color: #fff;
+    background-color: #b87643;
+    text-decoration: underline;
+}
+
+
+/*여섯번째 섹션설정*/
+section:nth-child(6) {
+    background-image: url(img/pickup_back.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 600px;
+    padding: 100px 0;
+}
+
+.pickup_inner{
+    display: flex;
+    text-align: right;
+}
+
+.pickup_inner .txtBox{
+    color: #fff;
+    margin-top: 50px;
+}
+
+.pickup_inner .topTxt{
+    font-size: 40px;
+    font-weight:bold;
+    letter-spacing: 10px;
+    line-height: 0.9;
+}
+
+.pickup_inner .topTxt strong{
+    font-size: 100px;
+    }
+
+.pickup_inner .topTxt b{
+    font-size: 80px;
+}
+
+.pickup_inner .bottomTxt{
+    font-size: 15px;
+    letter-spacing: -2px;
+    color: #eeedeb;
+}
+
+.pickup_inner .bottomTxt strong{
+    color: #fff;
+    font-weight: bold;
+}
+
+.pickup_inner .bottomTxt p{
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.pickup_inner .bottomTxt span{
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+
+.pickup_inner .bottomTxt span a{
+    color: #fff;
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.pickup_inner .bottomTxt span a:hover{
+    transition: all 0.5s;
+    color: #000;
+    background-color: #fff;
+    text-decoration: underline;
+}
+
+.pickup_inner .imgBox{
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+
+
+
+/* 미디어쿼리구간설정############################################### */
+
+/* 와이드데스크탑 설정 */
+
+/* 1280px 이상일때설정 */
+@media(min-width:1280px) {
+
+
+    .header_inner,.reward_inner,.summer_inner, .bali_inner, .pickup_inner {
         width: 1240px;
         margin: 0 auto;
     }
+
+    .notice_inner {
+        width: 620px;
+
+    }
+
+    .promo_inner {
+        width: 620px;
+    }
+
 }
