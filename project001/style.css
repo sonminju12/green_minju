@@ -152,7 +152,7 @@ header img{
 
 .mainTxt {
     position: absolute;
-    left: 700px;
+    left: 800px;
     bottom: -80px;
     margin-bottom: 200px;
     text-align: right;
@@ -329,34 +329,30 @@ header img{
 /* 체험안내 */
 
 .section3 .name {
-    margin-bottom: 90px;
-    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 .experience {
     
 }
 
 .experience img{
-    width: 600px;
-    height: 300px;
-}
-
-.experience p{
-    position: absolute;
-    right: 40px;
-    bottom: 20px;
-}
-
-.experience ul {
-    display: flex;
-    flex-wrap: wrap;
-    display: flex;
     width: 100%;
-    justify-content: center;
+    height: 350px;
 }
 
 .experience p{
     text-align: right;
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+}
+
+.experience ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .experience span{
@@ -367,7 +363,7 @@ header img{
 .experience strong {
     display: block;
     font-size: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .experience li {
@@ -380,14 +376,14 @@ header img{
 }
 
 .experience li:nth-child(1) {
-    width: 50%;
+    width: 48%;
 
 }
 .experience li:nth-child(2) {
-    width: 50%;
+    width: 48%;
 }
 .experience li:nth-child(3) {
-    width: 50%;
+    width: 48%;
     padding-top: 80px;
 }
 
