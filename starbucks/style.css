@@ -727,8 +727,6 @@ section:nth-child(8) {
 
 
 
-
-
 /* 푸터설정 */
 footer {
     background-color: #333;
@@ -764,7 +762,7 @@ footer {
 @media(min-width:1280px) {
 
 
-    .header_inner,.reward_inner,.summer_inner, .bali_inner, .pickup_inner, .reserve2_inner, .search_inner, copyright {
+    .header_inner,.reward_inner,.summer_inner, .bali_inner, .pickup_inner, .reserve2_inner, .search_inner, .copyright {
         width: 1240px;
         margin: 0 auto;
     }
